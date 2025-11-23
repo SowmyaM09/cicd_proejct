@@ -12,13 +12,13 @@ jobs:
 
     steps:
       # -------------------
-      # CHECKOUT CODE
+      # CHECKOUT
       # -------------------
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       # -------------------
-      # FRONTEND BUILD
+      # FRONTEND
       # -------------------
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -34,25 +34,20 @@ jobs:
         run: npm run build
 
       # -------------------
-      # BACKEND BUILD
+      # BACKEND
       # -------------------
-      - name: Setup JDK
+      - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: "temurin"
           java-version: "17"
 
-      - name: Build Spring Boot Backend
+      - name: Build Spring Boot backend
         working-directory: ./portfoliowebsite_making_freelacing-main
         run: mvn clean package -DskipTests
 
       # -------------------
-      # DOCKER COMPOSE v2
+      # DOCKER COMPOSE v2 (NO INSTALL NEEDED)
       # -------------------
-      - name: Install docker compose plugin
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose-plugin
-
       - name: Build Docker containers
         run: docker compose build
