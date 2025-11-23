@@ -1,0 +1,18 @@
+.admin-dashboard {
+  max-width: 700px;
+  margin: 60px auto 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  padding: 36px 32px 32px 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+}
+.admin-dashboard h2 {
+  color: #6c63ff;
+  margin-bottom: 18px;
+}
+.admin-dashboard p {
+  font-size: 1.1rem;
+  color: #333;
+}

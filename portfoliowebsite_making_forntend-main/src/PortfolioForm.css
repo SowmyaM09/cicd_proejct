@@ -1,0 +1,111 @@
+/* Wider, more interactive layout */
+.portfolio-form-container {
+  max-width: 950px;
+  margin: 80px auto 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 32px 32px 32px;
+}
+.portfolio-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+/* Use grid for form fields */
+.portfolio-form .form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-form fieldset.section {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  padding: 18px 18px 10px 18px;
+  background: #fafbff;
+}
+.portfolio-form legend {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive grid for fields */
+.portfolio-form .section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+}
+.portfolio-form .section .form-group {
+  margin-bottom: 0;
+}
+.portfolio-form .section .form-group.full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 800px) {
+  .portfolio-form-container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .portfolio-form .section {
+    grid-template-columns: 1fr;
+  }
+}
+.portfolio-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.portfolio-form input,
+.portfolio-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  resize: vertical;
+  margin-top: 2px;
+}
+.portfolio-form button {
+  width: auto;
+  min-width: 120px;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+.portfolio-form button:disabled {
+  background: #b3d1ff;
+  cursor: not-allowed;
+}
+
+/* Multi-entry (array) sections */
+.portfolio-form .multi-entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  align-items: end;
+  margin-bottom: 10px;
+  background: #f5f7fa;
+  border-radius: 6px;
+  padding: 10px 10px 6px 10px;
+}
+.portfolio-form .multi-entry input {
+  margin-bottom: 0;
+}
+.portfolio-form .multi-entry button {
+  width: 40px;
+  min-width: 40px;
+  padding: 6px 0;
+  font-size: 1.2rem;
+  background: #ff6a6a;
+  margin-top: 0;
+}

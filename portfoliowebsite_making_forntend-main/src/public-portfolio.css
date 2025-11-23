@@ -1,0 +1,100 @@
+/* Modern portfolio card styling */
+.public-portfolio {
+  max-width: 1000px;
+  margin: 70px auto 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  padding: 48px 48px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.public-entry {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ececec;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 900px) {
+  .public-portfolio {
+    max-width: 98vw;
+    padding: 18px 2vw;
+  }
+}
+.public-profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.public-portfolio h1 {
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+  color: #2d2d2d;
+}
+.public-title {
+  font-size: 1.2rem;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+.public-summary {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.public-section {
+  width: 100%;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 18px 0 0 0;
+  padding: 18px 22px 10px 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.public-section h3 {
+  margin-top: 0;
+  color: #6c63ff;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+.public-entry {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ececec;
+}
+.public-entry:last-child {
+  border-bottom: none;
+}
+.public-links {
+  margin-top: 8px;
+}
+.public-links a {
+  margin-right: 14px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.public-links a:hover {
+  color: #4834d4;
+}
+@media (max-width: 600px) {
+  .public-portfolio {
+    padding: 18px 4vw;
+  }
+  .public-section {
+    padding: 12px 6px 6px 6px;
+  }
+  .public-profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+}
